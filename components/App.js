@@ -12,6 +12,16 @@ class App extends React.Component {
     this.handleIncrement = this.handleIncrement.bind(this);
   }
 
+  handleIncrement(ev){
+    ev.preventDefault();
+    actions.increment();
+  }
+
+  handleDecrement(ev){
+    ev.preventDefault();
+    actions.decrement();
+  }
+
 
   componentDidMount () {
     this.removeListener = counterStore.addListener((state) => {
