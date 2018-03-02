@@ -2,7 +2,7 @@ import Store from './Store'
 
 export default class CounterStore extends Store {
   constructor(){
-   super(0);
+   super();
  }
 
   increment(){
