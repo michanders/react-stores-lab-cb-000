@@ -1,6 +1,6 @@
 import Store from './Store'
 
-export default class CounterStore extends Store {
+class CounterStore extends Store {
   constructor(){
    super();
  }
@@ -17,3 +17,4 @@ export default class CounterStore extends Store {
 }
 
 const counterStore = new CounterStore();
+export default counterStore;
