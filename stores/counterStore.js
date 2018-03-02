@@ -1,8 +1,24 @@
 import Store from './Store'
 
 export default class CounterStore extends Store {
-  // Your implementation here.
-  // Hint: extend the Store class!
+  constructor(){
+   super(0);
+
+ }
+
+  increment(){
+
+    const updatedState = this.getState() + 1;
+    this.setState(updatedState);
+
+  }
+
+  decrement(){
+    const updatedState = this.getState() - 1;
+    this.setState(updatedState);
+
+  }
+
 }
 
 const counterStore = new CounterStore();
