@@ -11,7 +11,7 @@ class App extends React.Component {
     this.handleDecrement = actions.decrement.bind(this);
     this.handleIncrement = actions.increment.bind(this);
   }
-  
+
   handleIncrement(ev){
     ev.preventDefault();
     actions.increment();
