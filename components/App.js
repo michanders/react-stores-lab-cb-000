@@ -7,9 +7,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       counter: counterStore.getState()
-   }
-   this.handleDecrement = actions.decrement.bind(this);
-   this.handleIncrement = actions.increment.bind(this);
+    }
+  }
+
+  handleIncrement(){
+    actions.increment.bind(this);
+  }
+
+  handleDecrement(){
+    actions.decrement.bind(this);
   }
 
   componentDidMount () {
