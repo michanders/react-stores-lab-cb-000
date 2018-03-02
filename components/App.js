@@ -8,8 +8,8 @@ class App extends React.Component {
     this.state = {
       counter: counterStore.getState()
     }
-    this.handleDecrement = actions.decrement.bind(this);
-    this.handleIncrement = actions.increment.bind(this);
+    this.handleDecrement = this.handleDecrement.bind(this);
+    this.handleIncrement = this.handleIncrement.bind(this);
   }
 
   handleIncrement(ev){
@@ -21,6 +21,7 @@ class App extends React.Component {
     ev.preventDefault();
     actions.decrement();
   }
+
 
   componentDidMount () {
     this.removeListener = counterStore.addListener((state) => {
