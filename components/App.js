@@ -6,11 +6,22 @@ class App extends React.Component {
     this.state = {
       counter: counterStore.getState()
    }
-   this.handleDecrement = actions.decrement().bind(this);
-   this.handleIncrement = actions.increment().bind(this);
+   this.handleDecrement = this.handleDecrement.bind(this);
+   this.handleIncrement = this.handleIncrement.bind(this);
   }
 
-  componentDidMount() {
+  handleIncrement(ev){
+    ev.preventDefault();
+    actions.increment();
+  }
+
+  handleDecrement(ev){
+    ev.preventDefault();
+    actions.decrement();
+  }
+
+
+  componentDidMount () {
     this.removeListener = counterStore.addListener((state) => {
       this.setState({
         counter: state
@@ -18,11 +29,11 @@ class App extends React.Component {
     })
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.removeListener();
   }
-
-  render() {
+  
+  render () {
     return (
       <div className='app'>
         <h1 className='counter'></h1>
