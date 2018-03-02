@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      counter: Store.getState()
+      counter: counterStore.getState()
     }
     this.handleDecrement = this.handleDecrement.bind(this);
     this.handleIncrement = this.handleIncrement.bind(this);
