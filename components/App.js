@@ -38,7 +38,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <h1 className='counter'></h1>
+        <h1 className='counter'>{this.state.counter}</h1>
         <div className='actions'>
           <button className='decrement' onClick={this.handleDecrement}>
             -
