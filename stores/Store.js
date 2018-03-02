@@ -6,7 +6,7 @@ class Store {
 
   setState(state){
     this.state = state;
-    for(const listener of this.listeners){
+    for(var listener of this.listeners){
       listener(state);
     }
   }
