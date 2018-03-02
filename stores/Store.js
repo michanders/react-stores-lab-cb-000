@@ -24,4 +24,4 @@ class Store {
   }
 }
 
-export default store;
+export default Store;
