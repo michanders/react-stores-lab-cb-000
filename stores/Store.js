@@ -1,23 +1,20 @@
-class Store {
-  // Your implementation here.
-  // Hint: Our <App /> component won't directly use this store, but instead the
-  // CounterStore is going to inherit from it.
+export default class Store {
   constructor(initialState){
       this.state = initialState;
       this.listeners = [];
     }
-  
+
     setState(state){
       this.state = state;
       for(const listener of this.listeners){
         listener(state);
       }
     }
-  
+
     getState(){
       return this.state;
     }
-  
+
     addListener(listener){
       this.listeners.push(listener);
       const removeListener = () => {
@@ -25,7 +22,4 @@ class Store {
       };
       return removeListener;
     }
-  
   }
-
-export default Store;
