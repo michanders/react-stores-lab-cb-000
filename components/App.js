@@ -3,17 +3,15 @@ import actions from '../actions';
 import counterStore from '../stores/counterStore'
 
 class App extends React.Component {
-  constructor (props) {
+  constructor (props, ev) {
     super(props);
     this.state = {
       counter: counterStore.getState()
    }
+   ev.preventDefault();
    this.handleDecrement = actions.decrement.bind(this);
    this.handleIncrement = actions.increment.bind(this);
   }
-
-
-
 
   componentDidMount () {
     this.removeListener = counterStore.addListener((state) => {
