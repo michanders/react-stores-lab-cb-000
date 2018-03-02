@@ -6,13 +6,13 @@ class CounterStore extends Store {
  }
 
   increment(){
-    const updatedState = this.getState() + 1;
-    this.setState(updatedState);
+    const stat = this.getState() + 1;
+    this.setState(stat);
   }
 
   decrement(){
-    const updatedState = this.getState() - 1;
-    this.setState(updatedState);
+    const stat = this.getState() - 1;
+    this.setState(stat);
   }
 }
 
