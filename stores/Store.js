@@ -1,4 +1,4 @@
-export default class Store {
+class Store {
   constructor(initialState){
     this.state = initialState;
     this.listeners = [];
@@ -23,3 +23,5 @@ export default class Store {
     return removeListener;
   }
 }
+
+export default store;
