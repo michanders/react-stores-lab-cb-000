@@ -3,12 +3,12 @@ import actions from '../actions';
 import counterStore from '../stores/counterStore'
 
 class App extends React.Component {
-  constructor (props, ev) {
+  constructor (props) {
     super(props);
     this.state = {
       counter: counterStore.getState()
    }
-   ev.preventDefault();
+   event.preventDefault();
    this.handleDecrement = actions.decrement.bind(this);
    this.handleIncrement = actions.increment.bind(this);
   }
