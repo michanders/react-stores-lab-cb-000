@@ -22,7 +22,6 @@ class App extends React.Component {
     actions.decrement();
   }
 
-
   componentDidMount () {
     this.removeListener = counterStore.addListener((state) => {
       this.setState({
