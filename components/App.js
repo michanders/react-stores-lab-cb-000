@@ -10,8 +10,7 @@ class App extends React.Component {
    this.handleIncrement = actions.increment().bind(this);
   }
 
-
-  componentDidMount () {
+  componentDidMount() {
     this.removeListener = counterStore.addListener((state) => {
       this.setState({
         counter: state
@@ -19,11 +18,11 @@ class App extends React.Component {
     })
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.removeListener();
   }
 
-  render () {
+  render() {
     return (
       <div className='app'>
         <h1 className='counter'></h1>
