@@ -23,9 +23,10 @@ class App extends React.Component {
 
   componentDidMount () {
     this.removeListener = counterStore.addListener((state) => {
-    this.setState({
-    counter: state
-    });
+      this.setState({
+        counter: state
+      });
+    })
   }
 
   componentWillUnmount () {
